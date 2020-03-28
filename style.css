@@ -1,1 +1,47 @@
+#container {
+ padding: 0;
+  overflow: auto;
+  width: 1270px;
+  margin: 0 auto
+}
+#cards-list {
+  display: flex;
+  background-color: blue;
+  text-align: center;
+  width: 2100px;
+  margin: 0 auto;
+}
+.card {
+  padding: 10px;
+  flex: 33%;
+}
+img {
+  width: 80%;
+}
+.card-image {
+  border: solid 3px pink;
+}
+.card-content {
+  border: solid 3px red;
+}
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      position: absolute;
+    right: 108px;
+    top: 250px;
+}
 
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+      position: absolute;
+    left: 115px;
+    top: 275px;
+}
