@@ -1,0 +1,44 @@
+#container {
+  padding: 0;
+   overflow: auto;
+   width: 1270px;
+   margin: 0 auto
+ }
+ #cards-list {
+   display: flex;
+   text-align: center;
+   width: 2100px;
+   margin: 0 auto;
+   margin-top: 75px;
+ }
+ .card {
+   flex: 33%;
+ }
+  #header {
+  position: absolute;
+  bottom: 430px;
+ }
+ img {
+   width: 90%;
+ }
+ .right {
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+       position: absolute;
+     padding: 15px;
+     right: -135px;
+    bottom: 314px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+ }
+ 
+ .left {
+      transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: absolute;
+     left: 0;
+    bottom: 313px;
+    padding: 15px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+ }
