@@ -1,12 +1,3 @@
-document.querySelector('.product-tabs-brief-info').remove();
-let soruceEle = document.querySelector('.product-details-info')
-
-let div = document.createElement('div');
-div.className = 'amitay'
-div.style.cssText = "border: 10px solid red;padding: 86px 86px 86px 30px;position: relative;top: 500px;margin-bottom: 500px;"
-
-soruceEle.parentNode.insertBefore(div, soruceEle.nextSibling)
-
 // items data
 const titles = ['title1','title2','title3','title4','title5'];
 const prices = [1,2,3,4,5,];
@@ -17,27 +8,41 @@ const images = [
   'https://www.catster.com/wp-content/uploads/2016/06/vet-anemia-cat-TN-600x400.jpg',
   'https://www.port.ac.uk/-/media/images/news-events-and-blogs/news/2019/july/puppy-dog-eyes-muscles-600x400.ashx',
 ]
- 
-// UI Elements
+
+document.querySelector('.product-tabs-brief-info').remove();
+let soruceEle = document.querySelector('.product-details-info')
+
 let div = document.createElement('div');
-div.id = 'container'
-const amitay = document.querySelector('.amitay')
-amitay.appendChild(div);
+div.className = 'amitay'
+div.style.cssText = "border: 10px solid red;padding: 86px 86px 86px 30px;position: relative;top: 500px;margin-bottom: 500px;"
 
+soruceEle.parentNode.insertBefore(div, soruceEle.nextSibling)
 
-function appendContainer() {
-  const amitay = document.getElementsByClassName("amitay");
+const amitay = document.getElementsByClassName('amitay');
+
+const container = document.createElement('div');
+container.id = 'container'
+ 
+amitay.insertAdjacentHTML("afterend", container);  
+
+// UI Elements
+function pleaseWork() {
+console.log(amitay);
+console.log(container);
+};
+
+function appendContainer(e) {
+  console.log(e);
+  console.log(container);
   let containerNode = 
-      `<div id="container">
-      <div class="header">
+      `<div class="header">
         <h1> Widget Header </h1>
       </div>
         <i onclick="leftClick()" class="left"></i>
         <i onclick="rightClick()" class="right"></i>
       <div id="cards-list">
-    </div>
-  </div>`
-  div.appendChild(containerNode)
+    </div>`
+  container.insertAdjacentHTML("beforeend", containerNode);  
 }
 
 
@@ -60,9 +65,6 @@ for (i = 0; i < titles.length; i++) {
 }
 
 
-appendContainer();
-appendItems();
-
 // arrow functions
 function rightClick() {
   var elmnt = document.getElementById("container");
@@ -72,5 +74,9 @@ function leftClick() {
   var elmnt = document.getElementById("container");
   elmnt.scrollLeft -= 100;
 };
+
+pleaseWork();
+appendContainer();
+appendItems();
 
 
