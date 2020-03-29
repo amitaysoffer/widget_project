@@ -9,31 +9,24 @@ const images = [
   'https://www.port.ac.uk/-/media/images/news-events-and-blogs/news/2019/july/puppy-dog-eyes-muscles-600x400.ashx',
 ]
 
+// append first element on page
 document.querySelector('.product-tabs-brief-info').remove();
 let soruceEle = document.querySelector('.product-details-info')
-
 let div = document.createElement('div');
-div.className = 'amitay'
-div.style.cssText = "border: 10px solid red;padding: 86px 86px 86px 30px;position: relative;top: 500px;margin-bottom: 500px;"
-
+div.id = 'amitay'
+div.style.cssText = "padding: 86px 86px 86px 30px;position: relative;top: 50px;"
 soruceEle.parentNode.insertBefore(div, soruceEle.nextSibling)
 
-const amitay = document.getElementsByClassName('amitay');
 
+let amitay = document.getElementById('amitay');
 const container = document.createElement('div');
 container.id = 'container'
- 
-amitay.insertAdjacentHTML("afterend", container);  
+amitay.appendChild(container)
 
-// UI Elements
-function pleaseWork() {
-console.log(amitay);
-console.log(container);
-};
 
-function appendContainer(e) {
-  console.log(e);
-  console.log(container);
+
+
+function appendContainer() {
   let containerNode = 
       `<div class="header">
         <h1> Widget Header </h1>
@@ -64,19 +57,5 @@ for (i = 0; i < titles.length; i++) {
   }
 }
 
-
-// arrow functions
-function rightClick() {
-  var elmnt = document.getElementById("container");
-  elmnt.scrollLeft += 100;
-}
-function leftClick() {
-  var elmnt = document.getElementById("container");
-  elmnt.scrollLeft -= 100;
-};
-
-pleaseWork();
 appendContainer();
 appendItems();
-
-
